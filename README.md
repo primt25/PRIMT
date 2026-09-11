@@ -37,17 +37,17 @@ python train_PEBBLE_PRIMT.py                            # simulated (default)
 
 ### ⚠️ On the `scripted` backend
 
-**Running the full PRIMT pipeline against the API is expensive.** A single MetaWorld run issues on the order of 10⁵ LLM/VLM calls (crowd-check × 2 modalities per query, plus abduction / action / verification rounds per counterfactual, with tens of keyframe images per VLM call). We therefore ship `backend=scripted` as a **cost-free simulation of the feedback source**, so the rest of the pipeline can be developed, debugged and regression-tested without spending API budget.
+**Running the full PRIMT pipeline against the API can be expensive**, due to the multimodal nature of our method. We therefore ship `backend=scripted` as a **cost-free simulation of the feedback source**, so the rest of the pipeline can be developed, debugged and regression-tested without spending API budget.
 
 ---
 
 ## Reproducing
 
 ```bash
-# The method (requires OPENAI_API_KEY; see the cost note above)
+# Requires OPENAI_API_KEY
 python train_PEBBLE_PRIMT.py primt.fm.backend=openai seed=12345
 
-# API-free pipeline check (oracle-labelled reference, not the paper result)
+# API-free pipeline check 
 python train_PEBBLE_PRIMT.py primt.fm.backend=scripted seed=12345
 ```
 
