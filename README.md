@@ -2,7 +2,6 @@
 
 **PR**eference-based re**I**nforcement learning with **M**ultimodal feedback and **T**rajectory synthesis from foundation models (NeurIPS 2025).
 
-PRIMT replaces human preference labels in Preference-based RL (PbRL) with **foundation-model feedback**, and actively uses foundation models to synthesize trajectories that make reward learning faster and better.
 ---
 
 ## Requirements
