@@ -20,7 +20,7 @@ Additionally required only for the real foundation-model path (`backend=openai`)
 The simulated path (`backend=scripted`) needs none of these extras and makes **no network calls**.
 
 ---
-
+ 
 ## Selecting the feedback backend (the key hyperparameter)
 
 The single switch is `primt.fm.backend`:
